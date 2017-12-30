@@ -1,0 +1,54 @@
+# Capstone proposal
+***
+## Taxi cab patterns in New York City
+By Erin Killheffer
+***
+**The Problem**
+*What is problem I want to solve?*
+Many New Yorkers depend on taxi cabs to get around the city. Using public data, I would like to explore taxi traffic patterns and how these patterns have changed over time. Using various aspects of trip data, I would like to tie this data to various community factors, including neighborhood population changes and gentrification. I would also like to determine whether taxi traffic has been impacted by companies such as Uber and Lyft.
+***
+**The Client**
+*Who is your client and why do they care about this problem? In other words, what will your client do or decide based on your analysis that they wouldn't have otherwise?*
+The client could be either the NYC taxi service or a ride share company who is considering entering the market. Either of these clients could use the analysis to better understand the times and locations of high demand, and which neighborhoods have need for additional taxis.
+***
+**The Data**
+*What data are you going to use for this? How will you acquire this data?*
+The data is available in .csv files which can be accessed here: [linked phrase](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) Yellow taxi data is available from January 2009 to June 2017 and Green taxi data is available from August 2013 through June 2017. Data is available on a monthly basis. Each file has approximately xx rows. The variables are described in the following table:
+Field Name    | Description
+------------- | -------------
+VendorID   | A code indicating the TPEP provider that provided the record.  
+tpep_pickup_datetime  | The date and time when the meter was engaged.
+tpep_dropoff_datetime  | The date and time when the meter was disengaged. 
+Passenger_count  | The number of passengers in the vehicle.  
+Trip_distance  | The elapsed trip distance in miles reported by the taximeter. 
+Pickup_longitude  |Longitude where the meter was engaged. 
+Pickup_latitude  | Latitude where the meter was engaged. 
+RateCodeID  |Store_and_fwd_flagThe final rate code in effect at the end of the trip. 
+Store_and_fwd_flag  | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka "store and forward," because the vehicle did not have a connection to the server.  
+Dropoff_longitude  | Longitude where the meter was disengaged. 
+Dropoff_ latitude  | Latitude where the meter was disengaged. 
+Payment_type  | A numeric code signifying how the passenger paid for the trip.
+Fare_amount  | The time-and-distance fare calculated by the meter. 
+Extra  | Miscellaneous extras and surcharges.  
+Improvement_surcharge  | $0.30 improvement surcharge assessed trips at the flag drop. The improvement surcharge began being levied in 2015. 
+Tip_amount  | Tip amount - This field is automatically populated for credit card tips. Cash tips are not included. 
+Tolls_amount | Total amount of all tolls paid in trip.  Total_amount The total amount charged to passengers. Does not include cash tips.
+***
+**The Approach**
+*In brief, outline your approach to solving this problem (knowing that this might change later)*
+My approach will have the following steps:
+1. Data wrangling and cleaning
+  + Load files into R
+  + Clean data and account for missing variables
+  + Merge Yellow and Green taxi data sets
+2. Exploratory data analysis
+  + Use a combination of inferential statistics and data visualization to identify trends in trip data
+  + Determine potentially significant variables and identify correlations between variables
+3. Machine Learning
+ + Further analyze trip data, use statistical models to identify trends and predict variables such as tip amount
+4. Data visualization and report
+
+***
+**Deliverables**
+*What are your deliverables?*
+My deliverables will consist of a report on my findings, a slide deck, and the corresponding R code used in analyzing the data, which will be submitted and published on GitHub.
